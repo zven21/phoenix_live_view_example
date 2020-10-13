@@ -15,11 +15,10 @@
       <th>Title</th>
       <th>Body</th>
       <th>Enabled</th>
-
       <th></th>
     </tr>
   </thead>
-  <tbody id="posts">
+  <tbody id="posts" phx-update="prepend">
     <%= for post <- @posts do %>
       <tr id="post-<%= post.id %>">
         <td><%= post.title %></td>
